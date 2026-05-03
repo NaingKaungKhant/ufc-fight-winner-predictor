@@ -17,7 +17,9 @@ The finished project will combine data collection, data cleaning, exploratory da
 
 ## Current Status
 
-Initial project structure created. No data has been collected and no model has been trained yet.
+Initial project structure created. Step 1, data collection and organization, has started.
+
+No UFC dataset has been added yet and no model has been trained.
 
 ## Project Structure
 
@@ -25,6 +27,8 @@ Initial project structure created. No data has been collected and no model has b
 .
 ├── app/
 ├── data/
+│   ├── raw/
+│   └── processed/
 ├── models/
 ├── notebooks/
 ├── src/
@@ -36,7 +40,14 @@ Initial project structure created. No data has been collected and no model has b
 
 - `app/`: Streamlit application code for the final interactive prediction tool.
 - `data/`: Raw and processed datasets used throughout the project.
+- `data/raw/`: Original downloaded datasets. These files should not be manually edited.
+- `data/processed/`: Cleaned datasets created from the raw data.
 - `models/`: Saved trained models and model evaluation artifacts.
 - `notebooks/`: Jupyter notebooks for exploration, cleaning, feature engineering, and modeling experiments.
 - `src/`: Reusable Python modules for data processing, features, modeling, and utilities.
 
+## Step 1: Data Collection
+
+The first data science task is to collect historical UFC fight data and place the original files in `data/raw/`.
+
+Important beginner rule: keep raw data unchanged. When we clean or transform data later, we will save new files in `data/processed/`.
