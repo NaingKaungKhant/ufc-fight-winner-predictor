@@ -19,14 +19,14 @@ PROCESSED_DATA_DIR = DATA_DIR / "processed"
 
 
 def list_raw_data_files() -> list[Path]:
-    """Return all files currently stored in the raw data folder.
+    """Return all visible files currently stored in the raw data folder.
 
     This is useful at the start of the project because we want to know exactly
     which original data files are available before cleaning or analysis begins.
     """
     return sorted(
         path
-        for path in RAW_DATA_DIR.iterdir()
+        for path in RAW_DATA_DIR.rglob("*")
         if path.is_file() and not path.name.startswith(".")
     )
 
@@ -37,7 +37,7 @@ def load_raw_csv(file_name: str) -> pd.DataFrame:
     Parameters
     ----------
     file_name:
-        The name of the CSV file inside data/raw. Example: "ufc_fights.csv".
+        The CSV path inside data/raw. Example: "ufcstats/ufc_fight_results.csv".
 
     Returns
     -------

@@ -1,0 +1,19 @@
+# macOS Finder metadata
+.DS_Store
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Model artifacts can be large, so decide intentionally before committing them.
+models/*.pkl
+models/*.joblib
+
