@@ -51,3 +51,5 @@ No UFC dataset has been added yet and no model has been trained.
 The first data science task is to collect historical UFC fight data and place the original files in `data/raw/`.
 
 Important beginner rule: keep raw data unchanged. When we clean or transform data later, we will save new files in `data/processed/`.
+
+The first raw dataset source has been documented in `docs/data_sources.md`. Raw UFCStats CSV files are stored in `data/raw/ufcstats/`.
