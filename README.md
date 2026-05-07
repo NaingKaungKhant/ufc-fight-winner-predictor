@@ -53,3 +53,15 @@ The first data science task is to collect historical UFC fight data and place th
 Important beginner rule: keep raw data unchanged. When we clean or transform data later, we will save new files in `data/processed/`.
 
 The first raw dataset source has been documented in `docs/data_sources.md`. Raw UFCStats CSV files are stored in `data/raw/ufcstats/`.
+
+## Step 2: Initial Data Cleaning
+
+The first cleaning script is `src/clean_data.py`.
+
+It creates beginner-friendly processed files in `data/processed/`:
+
+- `clean_fight_results.csv`
+- `clean_fighter_tott.csv`
+- `cleaning_summary.md`
+
+This step standardizes columns, extracts explicit winners from fight outcomes, parses fighter measurements, and keeps modeling work for later.
